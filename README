@@ -1,47 +1,58 @@
-Linux Servers
+## Connecting
 
+### Linux Servers
+   
 You should have access to any of our public servers from within the departmental network. For example
 
+```
 ssh shell4.doc.ic.ac.uk
 ssh cccad1
+```
 
-If your account has just been created we advise that you change the default password (which you will have received in a separate e-mail).
+If your account has just been created we advise that you change the
+default password (which you will have received in a separate e-mail).
 
-If you are using any graphical utilities (e.g. MaxIDE), then you must '''enable X forwarding (-X)''':
+If you are using any graphical utilities (e.g. MaxIDE), then you
+must '''enable X forwarding (-X)''':
 
+```
 ssh -X shell4.doc.ic.ac.uk
 ssh -X cccad1
+```
 
-Windows Servers
+### Windows Servers
 
-DoC runs a Windows server that anyone can login to using remote desktop (RDP), with, most importantly, MS Office.
+DoC runs a Windows server that anyone can login to using remote
+desktop (RDP), with, most importantly, MS Office.
 
 It's officially documented here: https://www.doc.ic.ac.uk/csg/guides/remoteaccess/wints
 
 To login use
 
+```
 rdesktop -z -u <USERNAME> -d WIN -g 1280x1024 ts
+```
 
-Note:
+__Note__:
 
-    the domain is "WIN" (alternatively, prefix your username with "WIN<USERNAME>")
-    AFAIK this ts server is only accessible within IC, so you have to go through shell
+  1. the domain is "WIN" (alternatively, prefix your username with "WIN\<USERNAME>")
+  2. AFAIK this ts server is only accessible within IC, so you have to go through shell
 
-Using X2Go
+### Using X2Go
 
 You can create a virtual, local display on the remote server to which your software can run on. This is reliable, since everything runs locally on the build machine.
 
-You need to first download X2Go client on your local machine: https://wiki.x2go.org
+You need to first download X2Go client on your local machine:
+https://wiki.x2go.org
 
 The package is available on Windows, Linux and Mac.
 
 After the installation, you have to create a local profile with the following steps:
-
-    Click Session -> New session.
-    Put the hostname of the remote server that you want to connect to, such as cccad2.doc.ic.ac.uk as Host.
-    Put your userID as Login.
-    Select XFCE as Session type.
-    Click OK.
+1. Click `Session` -> `New session`.
+2. Put the hostname of the remote server that you want to connect to, such as `cccad2.doc.ic.ac.uk` as `Host`.
+3. Put your userID as `Login`.
+4. Select `XFCE` as `Session type`.
+5. Click `OK`.
 
 Then you can connect to the remote machine by doubling the profile. It should prompt for your CC group passwor
 
